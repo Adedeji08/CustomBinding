@@ -24,8 +24,8 @@ export class CoursesComponent implements OnInit {
       price: 0.00, ratings: 3.5, image: 'assets/Angular.png', description: 'In this course you will learn purely the fundamentals of Javascript. This course is purely....'
     },
     {
-      id: 102, name: 'Angular for beginners', author: 'Eben Dami', duration: 48, type: 'Premium',
-      price: 0.00, ratings: 3.5, image: 'assets/Angular.png', description: 'In this course you will learn purely the fundamentals of Javascript'
+      id: 102, name: 'Javascript for beginners', author: 'Eben Dami', duration: 48, type: 'Premium',
+      price: 0.00, ratings: 3.5, image: 'assets/what-is-javascript.jpeg', description: 'In this course you will learn purely the fundamentals of Javascript'
     },
     {
       id: 103, name: 'Angular for beginners', author: 'Eben Dami', duration: 48, type: 'Premium',
@@ -36,8 +36,8 @@ export class CoursesComponent implements OnInit {
       price: 0.00, ratings: 3.5, image: 'assets/Angular.png', description: 'In this course you will learn purely the fundamentals of Javascript'
     },
     {
-      id: 105, name: 'Angular for beginners', author: 'Eben Dami', duration: 48, type: 'Premium',
-      price: 0.00, ratings: 3.5, image: 'assets/Angular.png', description: 'In this course you will learn purely the fundamentals of Javascript'
+      id: 105, name: 'Javascriipt for the boss', author: 'Eben Dami', duration: 48, type: 'Premium',
+      price: 0.00, ratings: 3.5, image: 'assets/image3.webp', description: 'In this course you will learn purely the fundamentals of Javascript'
     },
     {
       id: 106, name: 'Angular for beginners', author: 'Eben Dami', duration: 48, type: 'Premium',
@@ -48,12 +48,12 @@ export class CoursesComponent implements OnInit {
       price: 0.00, ratings: 3.5, image: 'assets/Angular.png', description: 'In this course you will learn purely the fundamentals of Javascript'
     },
     {
-      id: 108, name: 'Angular for beginners', author: 'Eben Dami', duration: 48, type: 'Free',
+      id: 108, name: 'Angular and Javascript for beginners', author: 'Eben Dami', duration: 48, type: 'Free',
       price: 0.00, ratings: 3.5, image: 'assets/Angular.png', description: 'In this course you will learn purely the fundamentals of Javascript'
     },
     {
-      id: 109, name: 'Angular for beginners', author: 'Eben Dami', duration: 48, type: 'Premium',
-      price: 0.00, ratings: 3.5, image: 'assets/Angular.png', description: 'In this course you will learn purely the fundamentals of Javascript'
+      id: 109, name: 'Javascript for average', author: 'Eben Dami', duration: 48, type: 'Premium',
+      price: 0.00, ratings: 3.5,image: 'assets/what-is-javascript.jpeg', description: 'In this course you will learn purely the fundamentals of Javascript'
     },
     
   ]
@@ -68,10 +68,16 @@ export class CoursesComponent implements OnInit {
    }
 
    courseCountRadioButton: string = 'All';
+   searchText: string = '';
 
    onFilterRadioButtonChanged(data: string){
      this.courseCountRadioButton = data; 
     //  console.log(this.courseCountRadioButton)
+   }
+
+   onSearchTextEntered(searchValue: string){
+       this.searchText = searchValue;
+          console.log(this.searchText )
    }
   constructor() { }
 
